@@ -1,8 +1,7 @@
 FROM nginx:latest
 
-workdir /app
+COPY html /usr/share/nginx/html
 
-RUN apt-get update && \
-    apt-get install vim -y
+ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD ["nginx", "-g", "daemon off;"]
 
-COPY html/ /usr/share/nginx/html
