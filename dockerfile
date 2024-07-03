@@ -5,4 +5,4 @@ workdir /app
 RUN apt-get update && \
     apt-get install vim -y
 
-COPY html /usr/share/nginx
+COPY html/ /usr/share/nginx/html
