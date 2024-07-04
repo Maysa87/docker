@@ -1,0 +1,10 @@
+# Exemplo de Dockerfile para publicar e fazer o build
+FROM node:15
+
+WORKDIR /urs/app
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["node", "index.js"]
